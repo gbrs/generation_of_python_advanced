@@ -1,4 +1,4 @@
-lst = [1, 2, 3]
-lst_copy = list([lst])
-lst_copy.append(4)
-print(lst)
+list1 = ['a', 'b', ['c', ['d', 'e', ['f', 'g'], 'k'], 'l'], 'm', 'n']
+sub_list = ['h', 'i', 'j']
+list1[2][1][2].extend(sub_list)
+print(list1)
