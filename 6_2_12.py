@@ -1,3 +1,4 @@
-tuples = [(10, 20, 40), (40, 50, 60), (70, 80, 90), (10, 90), (1, 2, 3, 4), (5, 6, 10, 2, 1, 77)]
-new_tuples = [(*tpl[0:-1], 100) for tpl in tuples]
-print(new_tuples)
+tuples = [(), (), ('',), ('a', 'b'), (), ('a', 'b', 'c'), (1,), (), (), ('d',), ('', ''), ()]
+non_empty_tuples = [tpl for tpl in tuples if tpl]
+
+print(non_empty_tuples)

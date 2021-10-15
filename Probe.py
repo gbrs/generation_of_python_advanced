@@ -1,4 +1,4 @@
-list1 = ['a', 'b', ['c', ['d', 'e', ['f', 'g'], 'k'], 'l'], 'm', 'n']
-sub_list = ['h', 'i', 'j']
-list1[2][1][2].extend(sub_list)
-print(list1)
+tuples = [(), (), ('',), ('a', 'b'), (), ('a', 'b', 'c'), (1,), (), (), ('d',), ('', ''), ()]
+non_empty_tuples = [tpl for tpl in tuples if tpl]
+
+print(non_empty_tuples)
