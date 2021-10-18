@@ -2,32 +2,55 @@
 заполнение спиралью матрицы n на m
 """
 
-n, m = 4, 6
+n, m = 2, 1
 lst = [[None] * m for _ in range(n)]
 # print(lst)
-cnt = 0
+cnt = 1109
 top = 0
-bottom = n - 1
-left = 0
-right = m - 1
+bottom = n
+left = -1
+right = m
 
 
-while top <= bottom and left <= right:
-    for i in range(left, right):
-        cnt += 1
-        lst[top][i] = cnt
-    top += 1
-    while top <= bottom and left <= right:
-        for i in range(top - 1, bottom):
+while True:
+
+    right -= 1
+    if left <= right:
+        for i in range(left, right):
+            cnt += 1
+            lst[top][i] = cnt
+        [print(*row) for row in lst]
+        print()
+    else:
+        break
+
+    bottom -= 1
+    if top <= bottom:
+        for i in range(top, bottom):
             cnt += 1
             lst[i][right] = cnt
-        left += 1
+        [print(*row) for row in lst]
+        print()
+    else:
+        break
 
+    left += 1
+    if left <= right:
+        for i in range(right, left, -1):
+            cnt += 1
+            lst[bottom][i] = cnt
+        [print(*row) for row in lst]
+        print()
+    else:
+        break
 
+    top += 1
+    if top <= bottom:
+        for i in range(bottom, top, -1):
+            cnt += 1
+            lst[i][left] = cnt
+        [print(*row) for row in lst]
+        print()
+    else:
+        break
 
-
-
-
-
-
-[print(*row) for row in lst]
