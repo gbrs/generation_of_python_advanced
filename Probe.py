@@ -1,8 +1,6 @@
-countries = ('Russia', 'Argentina', 'Spain', 'Slovakia', 'Canada', 'Slovenia', 'Italy', 'Spain', 'Ukraine', 'Chile', 'Spain', 'Cameroon')
-number = countries.count('Spain')
-cnt = 0
-for country in countries:
-    if country == 'Spain':
-        cnt += 1
+fs1 = frozenset((1, 2, 3))
+fs2 = frozenset((2, 3, 4))
+s1 = set((1, 2, 3))
+s2 = (2, 3, 4)
 
-
+print(fs2 == s2)
