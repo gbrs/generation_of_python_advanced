@@ -1,6 +1,4 @@
-fs1 = frozenset((1, 2, 3))
-fs2 = frozenset((2, 3, 4))
-s1 = set((1, 2, 3))
-s2 = (2, 3, 4)
-
-print(fs2 == s2)
+words = ['Plum', 'Grapefruit', 'apple', 'orange', 'pomegranate', 'Cranberry',
+         'lime', 'Lemon', 'grapes', 'persimmon', 'tangerine', 'Watermelon',
+         'currant', 'Almond']
+print(*sorted(set(i.lower()[0] for i in words)))
