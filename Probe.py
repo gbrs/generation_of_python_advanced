@@ -1,3 +1,1 @@
-dct = {}
-dct['value'] = dct.get('value', []).append('value1')
-print(dct)
+print(range(20, 70, 10)[3])
