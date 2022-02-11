@@ -4,4 +4,3 @@ numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100)
 
 print(min(numbers, key=lambda x: sum(x) / len(x)))
 print(max(numbers, key=lambda x: sum(x) / len(x)))
-
